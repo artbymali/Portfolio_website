@@ -1,0 +1,433 @@
+@font-face {
+    font-family: 'PPMori-Regular'; /* Specify the font family name */
+    src: local('PPMori-Regular'), url('path/to/PPMori-Regular.ttf') format('truetype'); /* Specify the path to the TTF file */
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+html, body {
+    width: 100%;
+    min-height: 100%;
+    background-color: #000000;
+}
+
+/* Loader */
+#loader {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    background: #000000;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: poppins;
+    gap: 10px;
+}
+
+#loader h3 {
+    font-size: 2vw;
+    font-weight: 500;
+}
+
+
+/* Header */
+header{ 
+    display: block;
+    padding: 1.25rem 0;
+    position: fixed;
+    transition: all 300ms ease-in-out;
+    top: 0;
+    z-index: 9999;
+    width: 100%;
+    background: black;
+}
+
+header.scroll {
+    background: white;
+}
+
+header.scroll a, h4 {
+    color: black;
+}
+
+.header-container {
+    width: 92%;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: poppins;
+    z-index: 1;
+}
+
+.logo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+}
+
+.logo h4 a {
+    font-size: 26px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+menu ul {
+    display: flex;
+    gap: 2.5rem;
+}
+
+menu ul li a {
+    font-weight: 400;
+    font-family: "PPMori-Regular";
+    font-size: 16px;
+    letter-spacing: 0.6px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+menu ul li a:hover {
+    color: #D2DE24;
+}
+
+.Contact-button button {
+    position: relative;
+    display: inline-flex;
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 17px;
+    /* font-weight: 100; */
+    letter-spacing: 0.9px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 14px 28px;
+    border-radius: 50px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.Contact-button button:hover {
+    color: black;
+    z-index: 1;
+}
+
+.Contact-button button a {
+    position: relative;
+    font-family: 'PPMori-Regular';
+    font-weight: 900;
+    z-index: 1;
+    background: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.Contact-button button:hover a {
+    color: black;
+}
+
+.Contact-button button::before {
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #D2DE24;
+    transition: width 0.5s, height 0.5s;
+}
+
+.Contact-button button:hover::before {
+    width: 400px;
+    height: 400px;
+}
+
+.ContactButton {
+    transition: transform 0.5s ease; /* Add transition for smooth animation */
+}
+
+
+.mask {
+    position: absolute;
+    right: 55px;
+    top: -200px;
+    /* overflow: hidden; */
+    transition: top 0.8s ease; /* Add transition property */
+}
+
+.mask i {
+    font-size: 35px;
+    color: rgb(255, 255, 255);
+    background: #000000;
+    padding: 8px;
+    border-radius: 50px;
+    z-index: 999;
+    cursor: pointer;
+}
+
+.BackToTop {
+    position: absolute;
+    top: 50px;
+}
+
+
+.Home {
+    width: 100%;
+    position: relative;
+    padding-top: 90px;
+}
+
+.Home-container {
+    width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Home-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    position: relative;
+}
+
+.Home-content-top {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.Home-content-top img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.Home-content-x {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.Home-content-middle {
+    position: relative;
+    width: 500px;
+    background: #A6A8Ab;
+}
+
+.Home-content-middle img {
+    /* position: absolute;
+    top: 0%;
+    left: 50%;
+    max-width: 100%;
+    height: 150px; 
+    transform: translate(-60%, -52%); 
+    object-fit: cover; */
+    /* z-index: 1; */
+    /* background: #14167c; */
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 650px;
+    object-fit: cover;
+    object-position: top;
+    height: 750px;
+    transform: translate(-60%, -60%); 
+}
+
+.Home-content-left {
+    width: 30%;
+}
+
+.Home-content-left h2 {
+    font-family: Calistoga;
+    font-weight: 400;
+    font-size: 60px;
+    padding-bottom: 10px;
+    line-height: 1.09;
+}
+
+.Home-content-left p {
+    font-size: 14px;
+    line-height: 1.4;
+    font-family: sans-serif;
+    color: #A6A8Ab;
+    padding-bottom: 30px;
+}
+
+.Home-content-left button {
+    border: none;
+    outline: none;
+    background: #C9F31D;
+    padding: 12px 26px;
+    color: black;
+    font-family: poppins;
+    font-size: 17px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+ }
+
+.Home-content-left button:hover {
+    background: white;
+    color: black;
+}
+
+.Home-content-right {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 2rem;
+}
+
+.Home-content-avard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Home-content-avard h2 {
+    font-family: Calistoga;
+    font-weight: 400;
+    font-size: 35px;
+    padding-bottom: 5px;
+}
+
+.Home-content-avard h2::after {
+    content: '+';
+}
+
+.different h2::after {
+    content: '%';
+}
+
+.Home-content-avard p {
+    font-family: inter;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #cbcbce;
+} 
+
+.Home-content-left button:hover {
+    background: white;
+    color: black;
+}
+
+
+.Home-content-right {
+    width: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.Home-content-avard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Home-content-avard h2 {
+    font-family: Calistoga;
+    font-weight: 400;
+    font-size: 35px;
+    padding-bottom: 5px;
+}
+
+.Home-content-avard h2::after {
+    content: '+';
+}
+
+.different h2::after {
+    content: '%';
+}
+
+.Home-content-avard p {
+    font-family: inter;
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #cbcbce;
+} 
+
+/* <----Skill-reveal----> */
+
+.Skill-reveal {
+    width: 100%;
+    background: #C9F31D;
+    margin-top: 160px;
+    z-index: 2;
+    position: relative;
+}
+
+.Skill-reveal-container {
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Skill-reveal-container[data-animated="true"] {
+    overflow: hidden;
+}
+
+.Skill-reveal-container[data-animated="true"] .Tag-list {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 20s linear infinite;
+}
+
+.Tag-list {
+    padding-block: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    overflow: hidden;
+    align-items: center;
+}
+
+.Skill-reveal-inner h3 {
+    font-family: Calistoga;
+    color: black;
+    font-size: 25px;
+    font-weight: 100;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.Skill-reveal-inner h3::before {
+    content: '';
+    background-image: url(asterisk.png); /* Path to your image */
+    width: 30px; /* Adjust according to your image size */
+    height: 30px; /* Adjust according to your image size */
+    display: inline-block;
+    background-size: cover;
+    margin-right: 2rem; /* Adjust spacing between image and text */
+}
+
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 2rem));
+    }
+}
